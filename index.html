@@ -7,6 +7,47 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<style !important>
+		.buttonn {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.buttonn:hover::before {
+  transform: scaleX(1);
+}
+
+.buttonn-content {
+  position: relative;
+  z-index: 1;
+}
+
+.buttonn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+	</style>
 	<body class="is-preload">
 
 		<!-- Sidebar -->
@@ -30,50 +71,50 @@
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Avish Judnarain</h1>
-							<p>I am a Software Developer.<br />
+							<p>I am a Full-Stack Software Developer.<br />
 							 2nd year student at Varsity College<br />
 							 (Bachelor of Computer and Information Sciences in Application Development)<br />
 							</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Download CV</a></li>
-							</ul>
+							<button class="buttonn">
+								<span class="buttonn-content" id="downloadButton">Download CV</span>
+							</button>
 						</div>
 					</section>
 
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<h2>My Skills and Experience</h2>
+							<p>I have studied for 3 years developing software in various languages. I have worked on all kinds of applications from Console apps to Web apps. I have created and managed databases for these apps using software like MongoDB, Oracle Sql Developer, MySQL Workbench and SQL Server Management Studio.</p>
 							<div class="features">
 								<section>
 									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
+									<h3>Programming languages</h3>
+									<p>C#, C, Java, Python, HTML, CSS, JavaScript, Node.js, php, SQL, MySQL</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Software Used</h3>
+									<p>Visual Studio, Visual Studio Code, MySQL Workbench, Oracle Sql Developer, SQL Server Management Studio, Microsoft Azure</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Social Skills</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
+									<span class="icon solid major fa-code"></span>
+									<h3>Education</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
+									<span class="icon solid major fa-code"></span>
+									<h3>Certifications</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
+									<span class="icon solid major fa-code"></span>
+									<h3>Interests/Hobbies</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 							</div>
@@ -127,7 +168,7 @@
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<p>Contact Me with any Enquiries.</p>
 							<div class="split style1">
 								<section>
 									<form method="post" action="#">
@@ -154,17 +195,17 @@
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
+											<span>Port Shepstone<br />
+											Oslo Beach<br />
+											KZN</span>
 										</li>
 										<li>
 											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
+											<a href="#">avishj007@gmail.com</a>
 										</li>
 										<li>
 											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
+											<span>076 420 3879</span>
 										</li>
 										<li>
 											<h3>Social</h3>
@@ -173,7 +214,7 @@
 												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://www.linkedin.com/in/avish-judnarain-5b8430251/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 											</ul>
 										</li>
 									</ul>
@@ -201,6 +242,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				document.getElementById("downloadButton").addEventListener("click", function() {
+				  var fileURL = 'AvishJudnarain-CV.pdf';
+				  var fileName = 'AvishJudnarain-CV.pdf';
+				  var a = document.createElement("a");
+				  a.href = fileURL;
+				  a.download = fileName;
+				  document.body.appendChild(a);
+				  a.click();
+				  document.body.removeChild(a);
+				});
+			  </script>
 	</body>
 </html>
