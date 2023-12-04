@@ -8,44 +8,109 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<style !important>
-		.buttonn {
-  position: relative;
-  overflow: hidden;
-  height: 3rem;
-  padding: 0 2rem;
-  border-radius: 1.5rem;
-  background: #3d3a4e;
-  background-size: 400%;
-  color: #fff;
-  border: none;
-  font-family:Arial, Helvetica, sans-serif;
+.fancy {
+ background-color: transparent;
+ border: 2px solid #000;
+ border-radius: 0;
+ box-sizing: border-box;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ float: right;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 1.25em 2em;
+ position: relative;
+ text-align: center;
+ text-decoration: none;
+ text-transform: none;
+ transition: all 0.3s ease-in-out;
+ user-select: none;
+ font-size: 13px;
 }
 
-.buttonn:hover::before {
-  transform: scaleX(1);
+.fancy::before {
+ content: " ";
+ width: 1.5625rem;
+ height: 2px;
+ background: black;
+ top: 50%;
+ left: 1.5em;
+ position: absolute;
+ transform: translateY(-50%);
+ transform-origin: center;
+ transition: background 0.3s linear, width 0.3s linear;
 }
 
-.buttonn-content {
-  position: relative;
-  z-index: 1;
+.fancy .text {
+ font-size: 1.125em;
+ line-height: 1.33333em;
+ padding-left: 2em;
+ display: block;
+ text-align: left;
+ transition: all 0.3s ease-in-out;
+ text-transform: uppercase;
+ text-decoration: none;
+ color: black;
 }
 
-.buttonn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: inherit;
-  border-radius: inherit;
-  background: linear-gradient(
-    82.3deg,
-    rgba(150, 93, 233, 1) 10.8%,
-    rgba(99, 88, 238, 1) 94.3%
-  );
-  transition: all 0.475s;
+.fancy .top-key {
+ height: 2px;
+ width: 1.5625rem;
+ top: -2px;
+ left: 0.625rem;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+ height: 2px;
+ width: 1.5625rem;
+ right: 1.875rem;
+ bottom: -2px;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+ height: 2px;
+ width: 0.625rem;
+ right: 0.625rem;
+ bottom: -2px;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+ color: white;
+ background: black;
+}
+
+.fancy:hover::before {
+ width: 0.9375rem;
+ background: white;
+}
+
+.fancy:hover .text {
+ color: white;
+ padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+ left: -2px;
+ width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+ .fancy:hover .bottom-key-2 {
+ right: 0;
+ width: 0;
 }
 	</style>
 	<body class="is-preload">
@@ -75,9 +140,12 @@
 							 2nd year student at Varsity College<br />
 							 (Bachelor of Computer and Information Sciences in Application Development)<br />
 							</p>
-							<button class="buttonn">
-								<span class="buttonn-content" id="downloadButton">Download CV</span>
-							</button>
+							<a class="fancy" id="downloadButton">
+								<span class="top-key"></span>
+								<span class="text">Download CV</span>
+								<span class="bottom-key-1"></span>
+								<span class="bottom-key-2"></span>
+							  </a>
 						</div>
 					</section>
 
@@ -170,11 +238,11 @@
 									<!-- One -->
 									<section id="one" class="wrapper style2 spotlights">
 										<section>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+											<a href="#" class="image"><img src="images/BargainBasketPic.png" alt="" data-position="center center" /></a>
 											<div class="content">
 												<div class="inner">
-													<h2>Sed ipsum dolor</h2>
-													<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+													<h2>E-Commerce Website (BargainBasket)</h2>
+													<p>I worked as a Full-Stack Dev with 3 other developers for a hackathon to work on and develop a full E-Commerce website that compares local prices for grocery items from different retailers to save you money by ordering groceries accumulated of the cheapest items of your choice from different stores.</p>
 													<ul class="actions">
 														<li><a href="generic.html" class="button">Learn more</a></li>
 													</ul>
